@@ -8,7 +8,10 @@ double diff = 0;
 
 Random rand = new Random();
 for (int i = 0; i < n; i++ ){
-    a[i] = rand.Next(100, 1000); 
+    a[i] = rand.NextDouble() * (10-1) + 1;
+
+    Console.Write($"[{string.Join(", ", Math.Round(a[i], 2))}]");
+
         if (a[i]%2 == 0){
             count ++;
 }
@@ -17,7 +20,7 @@ for (int i = 0; i < n; i++ ){
 }
        
 }
-Console.WriteLine($"Result: [{String.Join(", ", a)}]");
+Console.WriteLine();
 Console.WriteLine($"Result: Количество четных чисел: [{count}]");
 Console.WriteLine($"Result: Сумма чисел стоящих на нечетных позициях: [{sum}]");
 int index = 0;
